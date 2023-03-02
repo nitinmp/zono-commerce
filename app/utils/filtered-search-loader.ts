@@ -25,7 +25,7 @@ export async function filteredSearchLoader({
     {
       input: {
         searchProducts: {
-          collectionId: params?.slug === 'Non-Alcoholic' ? '29' : '5',
+          collectionId: params?.slug === 'non-alcoholic' ? '29' : '5',
         },
       },
     },
