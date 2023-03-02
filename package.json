@@ -16,6 +16,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@cloudflare/workers-types": "^4.20230228.0",
     "@graphql-codegen/typescript-generic-sdk": "^3.0.4",
     "@headlessui/react": "^1.7.4",
     "@heroicons/react": "^2.0.13",
