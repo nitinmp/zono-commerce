@@ -98,7 +98,7 @@ export default function ProductSlug() {
 
   return (
     <div>
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-4 mt-52">
         <h2 className="text-3xl sm:text-5xl font-light tracking-tight text-gray-900 my-8">
           {product.name}
         </h2>
@@ -114,10 +114,7 @@ export default function ProductSlug() {
             <span className="rounded-md overflow-hidden">
               <div className="w-full h-full object-center object-cover rounded-lg">
                 <img
-                  src={
-                    (product?.preview) +
-                    '?w=800'
-                  }
+                  src={product?.preview + '?w=800'}
                   alt={product.name}
                   className="w-full h-full object-center object-cover rounded-lg"
                 />
@@ -128,10 +125,11 @@ export default function ProductSlug() {
               <ScrollableContainer>
                 {product.assets.map((asset) => (
                   <div
-                    className={`basis-1/3 md:basis-1/4 flex-shrink-0 select-none touch-pan-x rounded-lg ${featuredAsset?.id == asset.id
-                      ? 'outline outline-2 outline-primary outline-offset-[-2px]'
-                      : ''
-                      }`}
+                    className={`basis-1/3 md:basis-1/4 flex-shrink-0 select-none touch-pan-x rounded-lg ${
+                      featuredAsset?.id == asset.id
+                        ? 'outline outline-2 outline-primary outline-offset-[-2px]'
+                        : ''
+                    }`}
                     onClick={() => {
                       setFeaturedAsset(asset);
                     }}
@@ -211,12 +209,13 @@ export default function ProductSlug() {
                 <div className="flex sm:flex-col1 align-baseline">
                   <button
                     type="submit"
-                    className={`max-w-xs flex-1 ${transition.state !== 'idle'
-                      ? 'bg-gray-400'
-                      : qtyInCart === 0
+                    className={`max-w-xs flex-1 ${
+                      transition.state !== 'idle'
+                        ? 'bg-gray-400'
+                        : qtyInCart === 0
                         ? 'bg-primary-600 hover:bg-primary-700'
                         : 'bg-green-600 active:bg-green-700 hover:bg-green-700'
-                      }
+                    }
                                      transition-colors border border-transparent rounded-md py-3 px-8 flex items-center
                                       justify-center text-base font-medium text-white focus:outline-none
                                       focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-primary-500 sm:w-full`}

@@ -10,7 +10,6 @@ import { useRef, useState } from 'react';
 import { FacetFilterTracker } from '~/components/facet-filter/facet-filter-tracker';
 import FacetFilterControls from '~/components/facet-filter/FacetFilterControls';
 import { FiltersButton } from '~/components/FiltersButton';
-import { PhotographIcon } from '@heroicons/react/solid';
 
 export const meta: MetaFunction = ({ data }) => {
   return {
@@ -21,7 +20,6 @@ export const meta: MetaFunction = ({ data }) => {
 };
 
 export async function loader({ params, request, context }: DataFunctionArgs) {
-
   const { result, resultWithoutFacetValueFilters, facetValueIds } =
     await filteredSearchLoader({
       params,
@@ -29,11 +27,7 @@ export async function loader({ params, request, context }: DataFunctionArgs) {
       context,
     });
 
-
-
-
   const collection = (await sdk.collection({ slug: params?.slug })).collection;
-
 
   if (!collection?.id || !collection?.name) {
     throw new Response('Not Found', {
@@ -60,19 +54,22 @@ export default function CollectionSlug() {
     facetValueIds,
   );
   return (
-    <div className="max-w-6xl mx-auto px-4">
-      <div className="flex justify-between items-center">
-        <h2 className="text-3xl sm:text-5xl font-light tracking-tight text-gray-900 my-8">
-          {collection.name}
-        </h2>
-
-        <FiltersButton
-          filterCount={facetValueIds.length}
-          onClick={() => setMobileFiltersOpen(true)}
+    <div className="">
+      <div className="relative">
+        <img
+          className="w-full overflow-hidden "
+          src={`${
+            collection.slug === 'non-alcoholic'
+              ? 'https://zono-media-public-stage.s3.ap-south-1.amazonaws.com/workspaces/a9f32728-13f6-45f0-a3b1-5e6386c80b4f/collections/non_alcoholic.jpg?w=300&h=300'
+              : 'https://www.unitedbreweries.com/Images/product/bg/kingfisher_ultra.jpg'
+          }`}
         />
+
+        <div className="absolute left-24 top-32">
+          <h2 className="font-sans text-white text-5xl">Non-Alcoholic</h2>
+        </div>
       </div>
 
-      <Breadcrumbs items={collection.breadcrumbs}></Breadcrumbs>
       {collection.children?.length ? (
         <div className="max-w-2xl mx-auto py-16 sm:py-16 lg:max-w-none border-b mb-16">
           <h2 className="text-2xl font-light text-gray-900">Collections</h2>

@@ -3,6 +3,9 @@ import { getCollections } from '~/providers/collections/collections';
 import { CollectionCard } from '~/components/collections/CollectionCard';
 import { BookOpenIcon } from '@heroicons/react/24/solid';
 import { LoaderArgs } from '@remix-run/server-runtime';
+import React from 'react';
+import { useScroll } from 'framer-motion';
+import Carousel from 'framer-motion-carousel';
 
 export async function loader({ request }: LoaderArgs) {
   const collections = await getCollections(request);
@@ -14,57 +17,29 @@ export async function loader({ request }: LoaderArgs) {
 export default function Index() {
   const { collections } = useLoaderData<typeof loader>();
   const headerImage = collections[0]?.featuredAsset?.preview;
+  const ref = React.useRef(null);
+  const { scrollXProgress } = useScroll({ container: ref });
+  const images = [
+    'https://www.unitedbreweries.com/Images/product/bg/kingfisher_strong.jpg',
+    'https://www.unitedbreweries.com/Images/product/bg/kingfisher_ultra.jpg',
+    'https://www.unitedbreweries.com/Images/product/bg/kingfisher_storm.jpg',
+  ];
+  const carouselText =
+    'The beer brands manufactured and marketed by United Breweries Ltd. have always been recognized for their international quality. A name synonymous with beer in India, Kingfisher stands for excitement, youth, and camaraderie. \nThis largest-selling beer in India, commands a significant market share* in the country with an alternate bottle of beer sold in India being a Kingfisher brand. We are also available in 60+ countries across the globe.\nOver the years, the Kingfisher family has expanded to include brands and variants that cater to all segments of our audience. The Heineken brands augment our portfolio with stellar products of global repute, making UB a preferred option for consumers and customers alike';
   return (
     <>
       <div className="relative">
-        {/* Decorative image and overlay */}
-        <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
-          {headerImage && (
+        <Carousel autoPlay={false} loop interval={100}>
+          {images.map((item, i) => (
             <img
-              className="absolute inset-0 w-full"
-              src={headerImage + '?w=800'}
-              alt="header"
+              src={item}
+              className="w-full"
+              alt="Tailwind CSS Carousel component"
             />
-          )}
-          <div className="absolute inset-0 bg-gradient-to-br from-zinc-400 to-black mix-blend-darken" />
-        </div>
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 bg-gray-900 opacity-50"
-        />
-        <div className="relative max-w-3xl mx-auto py-32 px-6 flex flex-col items-center text-center sm:py-64 lg:px-0">
-          <div className="relative bg-zinc-800 bg-opacity-0 rounded-lg p-0">
-            <h1 className="text-6xl text-transparent bg-clip-text font-extrabold tracking-normal lg:text-6xl bg-gradient-to-r from-yellow-600 via-red-500 to-blue-600">
-              Vendure Remix Starter
-            </h1>
-          </div>
-
-          <p className="mt-4 text-2xl text-white">
-            A headless commerce storefront starter kit built with{' '}
-            <a
-              href="https://www.vendure.io"
-              className="text-blue-300 hover:text-blue-500"
-            >
-              Vendure
-            </a>{' '}
-            &{' '}
-            <a
-              href="~/routes/__cart/index"
-              className="text-red-300 hover:text-red-500"
-            >
-              Remix
-            </a>
-          </p>
-          <p className="mt-4 text-gray-300 space-x-1">
-            <BookOpenIcon className="w-5 h-5 inline" />
-            <span>Read more:</span>
-            <a
-              className="text-primary-200 hover:text-primary-400"
-              href="https://www.vendure.io/blog/2022/05/lightning-fast-headless-commerce-with-vendure-and-remix"
-            >
-              Lightning Fast Headless Commerce with Vendure and Remix
-            </a>
-          </p>
+          ))}
+        </Carousel>
+        <div className="absolute bottom-10 ml-24 w-1/2">
+          <p className="font-sans text-white leading-loose">{carouselText}</p>
         </div>
       </div>
 
