@@ -55,8 +55,7 @@ export default function CollectionSlug() {
   );
   return (
     <div className="">
-      <div className="relative">
-        {/* Decorative image and overlay */}
+      {/* <div className="relative">
         <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
           {
             <img
@@ -64,7 +63,7 @@ export default function CollectionSlug() {
               src={`${
                 collection.slug === 'non-alcoholic'
                   ? 'https://zono-media-public-stage.s3.ap-south-1.amazonaws.com/workspaces/a9f32728-13f6-45f0-a3b1-5e6386c80b4f/collections/non_alcoholic.jpg?w=300&h=300'
-                  : 'https://www.unitedbreweries.com/Images/product/bg/kingfisher_ultra.jpg'
+                  : 'https://restaurantindia.s3.ap-south-1.amazonaws.com/s3fs-public/2019-12/2-min.jpg'
               }`}
               alt="header"
             />
@@ -78,6 +77,37 @@ export default function CollectionSlug() {
         <div className="relative max-w-3xl mx-auto py-32 px-6 flex flex-col items-center text-center sm:py-64 lg:px-0">
           <div className="relative bg-zinc-800 bg-opacity-0 rounded-lg p-0">
             <h1 className="text-6xl text-white bg-clip-text font-extrabold tracking-normal lg:text-6xl">
+              {collection.slug === 'non-alcoholic'
+                ? 'Non-Alcoholic'
+                : 'Alcoholic'}
+            </h1>
+          </div>
+        </div>
+      </div> */}
+
+      <div className="relative">
+        {/* Decorative image and overlay */}
+        <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
+          {
+            <img
+              className="absolute inset-0 w-full"
+              src={`${
+                collection.slug === 'non-alcoholic'
+                  ? 'https://zono-media-public-stage.s3.ap-south-1.amazonaws.com/workspaces/a9f32728-13f6-45f0-a3b1-5e6386c80b4f/collections/non_alcoholic.jpg?w=300&h=300'
+                  : 'https://restaurantindia.s3.ap-south-1.amazonaws.com/s3fs-public/2019-12/2-min.jpg'
+              }`}
+              alt="header"
+            />
+          }
+          <div className="absolute inset-0 bg-gradient-to-br from-zinc-400 to-black mix-blend-darken" />
+        </div>
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-gray-900 opacity-50"
+        />
+        <div className="relative max-w-3xl mx-auto py-32 px-6 flex flex-col items-center text-center sm:py-64 lg:px-0">
+          <div className="relative bg-zinc-800 bg-opacity-0 rounded-lg p-0">
+            <h1 className="text-6xl text-transparent bg-clip-text font-extrabold tracking-normal lg:text-6xl bg-gradient-to-r from-yellow-600 via-red-500 to-blue-600">
               {collection.slug === 'non-alcoholic'
                 ? 'Non-Alcoholic'
                 : 'Alcoholic'}

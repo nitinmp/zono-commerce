@@ -23,7 +23,7 @@ export default function Index() {
     'https://www.unitedbreweries.com/Images/product/bg/kingfisher_storm.jpg',
   ];
   const headerImage =
-    'https://www.unitedbreweries.com/Images/product/bg/kingfisher_storm.jpg';
+    'https://images.livemint.com/img/2019/12/04/1600x900/1_1575459816599.jpg';
   return (
     <>
       <div className="relative">
@@ -44,7 +44,7 @@ export default function Index() {
         />
         <div className="relative max-w-3xl mx-auto py-32 px-6 flex flex-col items-center text-center sm:py-64 lg:px-0">
           <div className="relative bg-zinc-800 bg-opacity-0 rounded-lg p-0">
-            <h1 className="text-6xl text-white bg-clip-text font-extrabold tracking-normal lg:text-6xl">
+            <h1 className="text-6xl text-transparent bg-clip-text font-extrabold tracking-normal lg:text-6xl bg-gradient-to-r from-yellow-600 via-red-500 to-blue-600">
               United Breweries
             </h1>
           </div>
