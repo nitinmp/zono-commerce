@@ -744,16 +744,12 @@ select {
   bottom: 0px;
 }
 
-#app .bottom-10 {
-  bottom: 2.5rem;
-}
-
 #app .bottom-2 {
   bottom: 0.5rem;
 }
 
-#app .left-10 {
-  left: 2.5rem;
+#app .left-24 {
+  left: 6rem;
 }
 
 #app .right-0 {
@@ -764,40 +760,8 @@ select {
   top: 0px;
 }
 
-#app .bottom-5 {
-  bottom: 1.25rem;
-}
-
-#app .left-24 {
-  left: 6rem;
-}
-
-#app .bottom-12 {
-  bottom: 3rem;
-}
-
-#app .bottom-24 {
-  bottom: 6rem;
-}
-
-#app .top-12 {
-  top: 3rem;
-}
-
-#app .bottom-52 {
-  bottom: 13rem;
-}
-
-#app .top-24 {
-  top: 6rem;
-}
-
 #app .top-32 {
   top: 8rem;
-}
-
-#app .top-56 {
-  top: 14rem;
 }
 
 #app .z-10 {
@@ -914,10 +878,6 @@ select {
 
 #app .ml-2 {
   margin-left: 0.5rem;
-}
-
-#app .ml-24 {
-  margin-left: 6rem;
 }
 
 #app .ml-3 {
@@ -1164,20 +1124,16 @@ select {
   width: 100vw;
 }
 
-#app .w-3\/12 {
-  width: 25%;
-}
-
-#app .w-4\/12 {
-  width: 33.333333%;
-}
-
 #app .min-w-0 {
   min-width: 0px;
 }
 
 #app .max-w-2xl {
   max-width: 42rem;
+}
+
+#app .max-w-3xl {
+  max-width: 48rem;
 }
 
 #app .max-w-6xl {
@@ -1580,6 +1536,11 @@ select {
   background-color: rgb(107 114 128 / var(--tw-bg-opacity));
 }
 
+#app .bg-gray-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+}
+
 #app .bg-green-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(220 252 231 / var(--tw-bg-opacity));
@@ -1635,6 +1596,15 @@ select {
   background-color: rgb(254 252 232 / var(--tw-bg-opacity));
 }
 
+#app .bg-zinc-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(39 39 42 / var(--tw-bg-opacity));
+}
+
+#app .bg-opacity-0 {
+  --tw-bg-opacity: 0;
+}
+
 #app .bg-opacity-20 {
   --tw-bg-opacity: 0.2;
 }
@@ -1645,6 +1615,10 @@ select {
 
 #app .bg-opacity-75 {
   --tw-bg-opacity: 0.75;
+}
+
+#app .bg-gradient-to-br {
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
 }
 
 #app .bg-gradient-to-r {
@@ -1667,6 +1641,21 @@ select {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+#app .from-zinc-400 {
+  --tw-gradient-from: #a1a1aa;
+  --tw-gradient-to: rgb(161 161 170 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+#app .to-black {
+  --tw-gradient-to: #000;
+}
+
+#app .bg-clip-text {
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+
 #app .fill-white {
   fill: #fff;
 }
@@ -1679,6 +1668,10 @@ select {
 #app .object-center {
   -o-object-position: center;
      object-position: center;
+}
+
+#app .p-0 {
+  padding: 0px;
 }
 
 #app .p-1 {
@@ -1765,6 +1758,11 @@ select {
 #app .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+}
+
+#app .py-32 {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
 }
 
 #app .py-4 {
@@ -1877,6 +1875,16 @@ select {
   line-height: 2.5rem;
 }
 
+#app .text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+#app .text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
 #app .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -1900,11 +1908,6 @@ select {
 #app .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-#app .text-5xl {
-  font-size: 3rem;
-  line-height: 1;
 }
 
 #app .font-bold {
@@ -1939,8 +1942,8 @@ select {
   line-height: 1.5rem;
 }
 
-#app .leading-loose {
-  line-height: 2;
+#app .tracking-normal {
+  letter-spacing: 0em;
 }
 
 #app .tracking-tight {
@@ -2065,6 +2068,10 @@ select {
   color: rgb(153 27 27 / var(--tw-text-opacity));
 }
 
+#app .text-transparent {
+  color: transparent;
+}
+
 #app .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -2114,6 +2121,10 @@ select {
 
 #app .opacity-50 {
   opacity: 0.5;
+}
+
+#app .mix-blend-darken {
+  mix-blend-mode: darken;
 }
 
 #app .shadow {
@@ -2534,6 +2545,11 @@ select {
     padding-bottom: 8rem;
   }
 
+  #app .sm\:py-64 {
+    padding-top: 16rem;
+    padding-bottom: 16rem;
+  }
+
   #app .sm\:pb-4 {
     padding-bottom: 1rem;
   }
@@ -2746,6 +2762,11 @@ select {
     border-width: 0px;
   }
 
+  #app .lg\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
   #app .lg\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -2758,6 +2779,11 @@ select {
 
   #app .lg\:pl-0 {
     padding-left: 0px;
+  }
+
+  #app .lg\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
   }
 }
 
