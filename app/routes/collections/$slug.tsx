@@ -56,17 +56,33 @@ export default function CollectionSlug() {
   return (
     <div className="">
       <div className="relative">
-        <img
-          className="w-full overflow-hidden "
-          src={`${
-            collection.slug === 'non-alcoholic'
-              ? 'https://zono-media-public-stage.s3.ap-south-1.amazonaws.com/workspaces/a9f32728-13f6-45f0-a3b1-5e6386c80b4f/collections/non_alcoholic.jpg?w=300&h=300'
-              : 'https://www.unitedbreweries.com/Images/product/bg/kingfisher_ultra.jpg'
-          }`}
+        {/* Decorative image and overlay */}
+        <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
+          {
+            <img
+              className="absolute inset-0 w-full"
+              src={`${
+                collection.slug === 'non-alcoholic'
+                  ? 'https://zono-media-public-stage.s3.ap-south-1.amazonaws.com/workspaces/a9f32728-13f6-45f0-a3b1-5e6386c80b4f/collections/non_alcoholic.jpg?w=300&h=300'
+                  : 'https://www.unitedbreweries.com/Images/product/bg/kingfisher_ultra.jpg'
+              }`}
+              alt="header"
+            />
+          }
+          <div className="absolute inset-0 bg-gradient-to-br from-zinc-400 to-black mix-blend-darken" />
+        </div>
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-gray-900 opacity-50"
         />
-
-        <div className="absolute left-24 top-32">
-          <h2 className="font-sans text-white text-5xl">Non-Alcoholic</h2>
+        <div className="relative max-w-3xl mx-auto py-32 px-6 flex flex-col items-center text-center sm:py-64 lg:px-0">
+          <div className="relative bg-zinc-800 bg-opacity-0 rounded-lg p-0">
+            <h1 className="text-6xl text-white bg-clip-text font-extrabold tracking-normal lg:text-6xl">
+              {collection.slug === 'non-alcoholic'
+                ? 'Non-Alcoholic'
+                : 'Alcoholic'}
+            </h1>
+          </div>
         </div>
       </div>
 
