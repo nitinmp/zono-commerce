@@ -932,10 +932,6 @@ select {
   margin-top: 1rem;
 }
 
-#app .mt-52 {
-  margin-top: 13rem;
-}
-
 #app .mt-6 {
   margin-top: 1.5rem;
 }
@@ -1625,21 +1621,15 @@ select {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-#app .from-zinc-400 {
-  --tw-gradient-from: #a1a1aa;
-  --tw-gradient-to: rgb(161 161 170 / 0);
+#app .from-zinc-200 {
+  --tw-gradient-from: #e4e4e7;
+  --tw-gradient-to: rgb(228 228 231 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
 #app .from-zinc-700 {
   --tw-gradient-from: #3f3f46;
   --tw-gradient-to: rgb(63 63 70 / 0);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-#app .from-zinc-200 {
-  --tw-gradient-from: #e4e4e7;
-  --tw-gradient-to: rgb(228 228 231 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
@@ -2113,10 +2103,6 @@ select {
 
 #app .opacity-0 {
   opacity: 0;
-}
-
-#app .opacity-10 {
-  opacity: 0.1;
 }
 
 #app .opacity-100 {

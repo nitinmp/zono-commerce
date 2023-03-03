@@ -98,7 +98,7 @@ export default function ProductSlug() {
 
   return (
     <div>
-      <div className="max-w-6xl mx-auto px-4 mt-52">
+      <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-3xl sm:text-5xl font-light tracking-tight text-gray-900 my-8">
           {product.name}
         </h2>
