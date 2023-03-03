@@ -48,6 +48,10 @@ export default function Index() {
               United Breweries
             </h1>
           </div>
+          <p className="mt-4 text-2xl text-white">
+            #One of the top future-ready companies in this year’s ET 500
+            Edition.
+          </p>
         </div>
       </div>
 

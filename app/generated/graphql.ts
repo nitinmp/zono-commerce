@@ -3498,14 +3498,14 @@ export type ProductQueryVariables = Exact<{
 
 export type ProductQuery = { __typename?: 'Query', product?: { __typename?: 'Product', id: string, name: string, description: string, preview?: string | null, collections: Array<{ __typename?: 'Collection', id: string, slug: string, name: string, breadcrumbs: Array<{ __typename?: 'CollectionBreadcrumb', id: string, name: string, slug: string }> }>, featuredAsset?: { __typename?: 'Asset', id: string, preview: string } | null, assets: Array<{ __typename?: 'Asset', id: string, preview: string }>, variants: Array<{ __typename?: 'ProductVariant', id: string, name: string, priceWithTax: number, currencyCode: CurrencyCode, sku: string, stockLevel: string, featuredAsset?: { __typename?: 'Asset', id: string, preview: string } | null }> } | null };
 
-export type ListedProductFragment = { __typename?: 'SearchResultProduct', id: string, parentSku: string, productVariants?: Array<{ __typename?: 'SearchProductVariants', id?: string | null, sku?: string | null, name?: string | null, shortName?: string | null } | null> | null, productAsset?: { __typename?: 'Preview', preview?: string | null } | null };
+export type ListedProductFragment = { __typename?: 'SearchResultProduct', id: string, parentSku: string, productVariants?: Array<{ __typename?: 'SearchProductVariants', id?: string | null, sku?: string | null, name?: string | null, shortName?: string | null, price?: number | null } | null> | null, productAsset?: { __typename?: 'Preview', preview?: string | null } | null };
 
 export type SearchQueryVariables = Exact<{
   input: SearchProductInput;
 }>;
 
 
-export type SearchQuery = { __typename?: 'Query', search: { __typename?: 'SearchProductResponse', totalItems: number, items?: Array<{ __typename?: 'SearchResultProduct', id: string, parentSku: string, productVariants?: Array<{ __typename?: 'SearchProductVariants', id?: string | null, sku?: string | null, name?: string | null, shortName?: string | null } | null> | null, productAsset?: { __typename?: 'Preview', preview?: string | null } | null } | null> | null } };
+export type SearchQuery = { __typename?: 'Query', search: { __typename?: 'SearchProductResponse', totalItems: number, items?: Array<{ __typename?: 'SearchResultProduct', id: string, parentSku: string, productVariants?: Array<{ __typename?: 'SearchProductVariants', id?: string | null, sku?: string | null, name?: string | null, shortName?: string | null, price?: number | null } | null> | null, productAsset?: { __typename?: 'Preview', preview?: string | null } | null } | null> | null } };
 
 export type SearchFacetValuesQueryVariables = Exact<{
   input: SearchProductInput;
@@ -3632,6 +3632,7 @@ export const ListedProductFragmentDoc = gql`
     sku
     name
     shortName
+    price
   }
   productAsset {
     preview

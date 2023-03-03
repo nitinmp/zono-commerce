@@ -85,6 +85,7 @@ export const listedProductFragment = gql`
       sku
       name
       shortName
+      price
     }
     productAsset {
       preview
