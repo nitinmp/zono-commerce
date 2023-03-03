@@ -9,7 +9,7 @@ const navigation = {
     { name: 'Returns', href: '#' },
   ],
   company: [
-    { name: 'UB AT A GLANCE', href: '#' },
+    { name: 'OUR BREWERIES AT A GLANCE', href: '#' },
     { name: 'MISSION STATEMENT', href: '#' },
     { name: 'HERITAGE & HISTORY', href: '#' },
     { name: 'BOARD OF DIRECTORS', href: '#' },

@@ -2109,6 +2109,10 @@ select {
   opacity: 1;
 }
 
+#app .opacity-30 {
+  opacity: 0.3;
+}
+
 #app .opacity-50 {
   opacity: 0.5;
 }
