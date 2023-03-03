@@ -10,7 +10,7 @@ export function SchemesCard({
       to={'/schemes/'}
       prefetch="intent"
       key={schemes.id}
-      className="max-w-[300px] relative rounded-lg overflow-hidden hover:opacity-75 xl:w-auto"
+      className="max-w-[300px] max-h-[250px] relative rounded-lg overflow-hidden hover:opacity-75 xl:w-auto"
     >
       <span aria-hidden="true" className="">
         <div className="w-full h-full object-center object-cover">

@@ -33,6 +33,12 @@ export default function Index() {
       image:
         'https://as1.ftcdn.net/v2/jpg/03/28/20/76/1000_F_328207623_jTi7VtB8vCrzEPKRIxyNCAQ1mJGNkVBK.jpg',
     },
+    {
+      id: '2',
+      name: 'Holi Offer',
+      image:
+        'https://coreldrawdesign.com/resources/previews/preview-holi-promotional-sale-banner-1583062514.jpg',
+    },
   ];
   return (
     <>
@@ -125,14 +131,6 @@ export default function Index() {
             </div>
           </div>
         </div>
-        {/* <Link
-          to={'/schemes/'}
-          prefetch="intent"
-          key={0}
-          className="max-w-[300px] relative rounded-lg overflow-hidden hover:opacity-75 xl:w-auto"
-        >
-          GO
-        </Link> */}
         <div className="mt-6 px-4 sm:hidden">
           <a
             href="~/routes/__cart/index#"

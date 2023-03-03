@@ -41,8 +41,12 @@ export default function Index() {
       <Breadcrumbs
         items={[{ name: 'Seaconal Schemes', slug: '', id: '1' }]}
       ></Breadcrumbs>
-      <img className="mt-10" src={offerImage + '?w=800'} alt="header" />
-      <div>
+      <img
+        className="mt-10 self-center"
+        src={offerImage + '?w=800'}
+        alt="header"
+      />
+      <div className="mt-10 text-base text-gray-700 text-justify w=800">
         Celebrate the joyous festival of Holi with our exciting festive scheme!
         Get ready to add more colors to your celebrations with amazing
         discounts, offers, and deals on a wide range of products. From

@@ -1044,6 +1044,10 @@ select {
   height: 100%;
 }
 
+#app .max-h-\[250px\] {
+  max-height: 250px;
+}
+
 #app .min-h-\[24rem\] {
   min-height: 24rem;
 }
@@ -1146,6 +1150,10 @@ select {
 
 #app .max-w-xs {
   max-width: 20rem;
+}
+
+#app .max-w-\[800px\] {
+  max-width: 800px;
 }
 
 #app .flex-1 {
@@ -1390,6 +1398,10 @@ select {
 #app .divide-gray-200 > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-divide-opacity));
+}
+
+#app .self-center {
+  align-self: center;
 }
 
 #app .overflow-hidden {
@@ -1849,6 +1861,10 @@ select {
 
 #app .text-center {
   text-align: center;
+}
+
+#app .text-justify {
+  text-align: justify;
 }
 
 #app .align-baseline {
