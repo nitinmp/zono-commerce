@@ -23,7 +23,7 @@ export default function Index() {
     'https://www.unitedbreweries.com/Images/product/bg/kingfisher_storm.jpg',
   ];
   const headerImage =
-    'https://images.livemint.com/img/2019/12/04/1600x900/1_1575459816599.jpg';
+    'https://www.unitedbreweries.com/images/home/ultra-wit-bier.jpg';
   return (
     <>
       <div className="relative">
