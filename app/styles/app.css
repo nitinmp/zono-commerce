@@ -1637,6 +1637,12 @@ select {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+#app .from-zinc-200 {
+  --tw-gradient-from: #e4e4e7;
+  --tw-gradient-to: rgb(228 228 231 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 #app .via-red-500 {
   --tw-gradient-to: rgb(239 68 68 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), #ef4444, var(--tw-gradient-to);
@@ -2107,6 +2113,10 @@ select {
 
 #app .opacity-0 {
   opacity: 0;
+}
+
+#app .opacity-10 {
+  opacity: 0.1;
 }
 
 #app .opacity-100 {

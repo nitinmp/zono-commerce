@@ -36,7 +36,7 @@ export default function Index() {
               alt="header"
             />
           )}
-          <div className="absolute inset-0 bg-gradient-to-br from-zinc-400 to-black mix-blend-darken" />
+          <div className="absolute inset-0 bg-gradient-to-br from-zinc-200 to-black mix-blend-darken" />
         </div>
         <div
           aria-hidden="true"
