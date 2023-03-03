@@ -33,7 +33,7 @@ export function Header({
     <header
       className={classNames(
         isScrollingUp ? 'sticky top-0 z-10 animate-dropIn' : '',
-        'bg-gradient-to-r from-stone-400 shadow-lg transform shadow-xl z-10 -m-20',
+        'bg-gradient-to-r from-zinc-700 to-gray-900 shadow-lg transform shadow-xl',
       )}
     >
       <div className="max-w-6xl mx-auto p-4 flex items-center space-x-4">

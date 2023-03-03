@@ -748,20 +748,12 @@ select {
   bottom: 0.5rem;
 }
 
-#app .left-24 {
-  left: 6rem;
-}
-
 #app .right-0 {
   right: 0px;
 }
 
 #app .top-0 {
   top: 0px;
-}
-
-#app .top-32 {
-  top: 8rem;
 }
 
 #app .z-10 {
@@ -790,10 +782,6 @@ select {
 
 #app .-m-2 {
   margin: -0.5rem;
-}
-
-#app .-m-20 {
-  margin: -5rem;
 }
 
 #app .m-auto {
@@ -1635,9 +1623,9 @@ select {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-#app .from-stone-400 {
-  --tw-gradient-from: #a8a29e;
-  --tw-gradient-to: rgb(168 162 158 / 0);
+#app .from-yellow-600 {
+  --tw-gradient-from: #ca8a04;
+  --tw-gradient-to: rgb(202 138 4 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
@@ -1647,8 +1635,27 @@ select {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+#app .from-zinc-700 {
+  --tw-gradient-from: #3f3f46;
+  --tw-gradient-to: rgb(63 63 70 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+#app .via-red-500 {
+  --tw-gradient-to: rgb(239 68 68 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), #ef4444, var(--tw-gradient-to);
+}
+
 #app .to-black {
   --tw-gradient-to: #000;
+}
+
+#app .to-blue-600 {
+  --tw-gradient-to: #2563eb;
+}
+
+#app .to-gray-900 {
+  --tw-gradient-to: #111827;
 }
 
 #app .bg-clip-text {
@@ -1856,10 +1863,6 @@ select {
   vertical-align: baseline;
 }
 
-#app .font-sans {
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-
 #app .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1873,11 +1876,6 @@ select {
 #app .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
-}
-
-#app .text-5xl {
-  font-size: 3rem;
-  line-height: 1;
 }
 
 #app .text-6xl {
