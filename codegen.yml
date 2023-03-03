@@ -1,6 +1,6 @@
 overwrite: true
 schema:
-  - '${VENDURE_API_URL:http://localhost:3005/commerce-v2/shop-api}'
+  - '${VENDURE_API_URL:https://stage.zonocloud.zonoapp.com/commerce-v2/shop-api}'
   # This is the additional schema extension that would be present it
   # the Stripe playment plugin is enabled on the Vendure server. Added
   # manually here to allow codegen to work regardless.
